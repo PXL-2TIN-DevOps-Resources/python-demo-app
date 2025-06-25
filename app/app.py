@@ -1,7 +1,14 @@
 from flask import Flask, jsonify, request
 from flasgger import Swagger, swag_from
+from dotenv import load_dotenv
+import os
+
+
+load_dotenv()
 
 app = Flask(__name__)
+
+
 swagger = Swagger(app, template_file=None, config={
     'headers': [],
     'specs': [
@@ -147,5 +154,6 @@ def delete_user(user_id):
     del users[user_id]
     return jsonify({'message': 'User deleted'})
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    port = int(os.getenv("PORT", 5000)) 
+    app.run(host="0.0.0.0", port=port)
