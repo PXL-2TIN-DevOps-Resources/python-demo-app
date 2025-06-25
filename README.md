@@ -14,20 +14,20 @@ A lightweight Python Flask-based REST API for managing users (Create, Read, Upda
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-### 🔧 Requirements
+### Requirements
 
 - Python 3.7+
 - `pip`
 
-### 📁 Installation
+### Installation
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### ▶️ Run the App
+### Run the App
 ```
 python app.py
 ```
@@ -35,3 +35,9 @@ or
 ```
 flask run
 ```
+
+### Unittesting
+```
+pytest
+```
+Exports for junit reports etc. are possible
