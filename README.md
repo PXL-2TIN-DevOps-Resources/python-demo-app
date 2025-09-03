@@ -18,7 +18,7 @@ A lightweight Python Flask-based REST API for managing users (Create, Read, Upda
 
 ### Requirements
 
-- Python 3.7+
+- Python 3
 - `pip`
 
 ### Installation
