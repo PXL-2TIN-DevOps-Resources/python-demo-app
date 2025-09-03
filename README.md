@@ -21,13 +21,13 @@ A lightweight Python Flask-based REST API for managing users (Create, Read, Upda
 - Python 3
 - `pip`
 
-### Installation
+### Dependency Installation
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Run the App
+### Run the app in development mode
 ```
 python app.py
 ```
@@ -41,3 +41,22 @@ flask run
 pytest
 ```
 Exports for junit reports etc. are possible
+
+## Deployment to production
+- Setup virtual environment:
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+- Install dependencies while in virtual environment:
+```
+pip install -r requirements.txt
+```
+- Install dedicated webserver package gunicorn:
+```
+pip install gunicorn
+```
+- Run webserver in `app` folder:
+```
+gunicorn -w 4 -b 0.0.0.0:5000 app:app
+```
